@@ -34,8 +34,8 @@ export default function Home() {
         ? await readAsDataURL(userUploadedImage)
         : // only use previous prediction as init image if there's a mask
         maskImage
-        ? prevPredictionOutput
-        : null,
+          ? prevPredictionOutput
+          : null,
       mask: maskImage,
     };
 
@@ -88,8 +88,15 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <main className="container mx-auto p-5">
-
+      <main className="container p-5 mx-auto">
+        <div className="flex flex-row items-center justify-between w-full">
+          <img src="/Logo-black.png" className="w-20" />
+          <Link href="https://proofofme.fun">
+            <button>
+              Back to Web
+            </button>
+          </Link>
+        </div>
         <div className="max-w-[min(1024px,100vw-40px)] mx-auto">
           <PromptForm onSubmit={handleSubmit} />
         </div>
@@ -102,7 +109,7 @@ export default function Home() {
             userUploadedImage={userUploadedImage}
           />
           <div
-            className="bg-gray-50 relative w-full flex items-stretch"
+            className="relative flex items-stretch w-full bg-gray-50"
             style={{ maxHeight: "min(768px, 100vw - 40px)", aspectRatio: "4 / 3" }}
           >
             <Canvas
@@ -114,18 +121,18 @@ export default function Home() {
         </div>
 
         <div className="max-w-[min(1024px,100vw-40px)] mx-auto">
-          {error && <div className="text-red-700 bg-red-50 p-3 rounded-md mb-5">{error}</div>}
+          {error && <div className="p-3 mb-5 text-red-700 rounded-md bg-red-50">{error}</div>}
 
           <div className="text-center">
             {((predictions.length > 0 &&
               predictions[predictions.length - 1].output) ||
               maskImage ||
               userUploadedImage) && (
-              <button className="lil-button" onClick={startOver}>
-                <StartOverIcon className="icon" />
-                Start over
-              </button>
-            )}
+                <button className="lil-button" onClick={startOver}>
+                  <StartOverIcon className="icon" />
+                  Start over
+                </button>
+              )}
 
             <Download predictions={predictions} />
             <Link href="https://replicate.com/ideogram-ai/ideogram-v2">
