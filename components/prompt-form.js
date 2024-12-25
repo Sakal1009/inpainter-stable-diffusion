@@ -18,7 +18,7 @@ export default function PromptForm(props) {
   return (
     <form
       onSubmit={props.onSubmit}
-      className="py-5 animate-in fade-in duration-700"
+      className="py-5 duration-700 animate-in fade-in"
     >
       <div className="flex max-w-[1024px]">
         <input
@@ -26,17 +26,17 @@ export default function PromptForm(props) {
           defaultValue={prompt}
           name="prompt"
           placeholder="Enter a prompt..."
-          className="block w-full flex-grow rounded-l-md border-r-0"
+          className="flex-grow block w-full border-r-0 rounded-l-md"
         />
         <select
           name="model"
-          className="bg-white border border-gray-300 border-l border-r-0 px-3 py-2 text-sm font-medium text-gray-700 focus:outline-none focus:ring-0 focus:border-gray-300"
+          className="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-l border-r-0 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300"
         >
-          <option value="ideogram-ai/ideogram-v2-turbo">Ideogram v2 Turbo (Fast)</option>
-          <option value="ideogram-ai/ideogram-v2">Ideogram v2 (High Quality)</option>
+          <option value="ideogram-ai/ideogram-v2-turbo">PoM API v1.0</option>
+          <option value="ideogram-ai/ideogram-v2">PoM API v2.0</option>
         </select>
         <button
-          className="bg-black text-white rounded-r-md text-sm font-medium px-4 py-2 flex-none"
+          className="flex-none px-4 py-2 text-sm font-medium text-white bg-black rounded-r-md"
           type="submit"
         >
           Generate

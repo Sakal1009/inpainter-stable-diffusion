@@ -10,28 +10,8 @@ export default function About() {
       </Head>
       <p className="pb-5 text-lg">
         <strong>Inpainting</strong> is the process of using AI image generation models to erase and repaint parts of existing images. This{" "}
-        <a className="underline" href="https://github.com/replicate/inpainter">
-          open-source demo
-        </a>{" "}
-        uses the{" "}
-        <a
-          className="underline"
-          href="https://replicate.com/ideogram-ai/ideogram-v2"
-        >
-          Ideogram v2
-        </a>{" "}
-        and{" "}
-        <a
-          className="underline"
-          href="https://replicate.com/ideogram-ai/ideogram-v2-turbo"
-        >
-          Ideogram v2 Turbo
-        </a>{" "}
-        machine learning models and{" "}
-        <a className="underline" href="https://replicate.com">
-          Replicate&apos;s API
-        </a>{" "}
-        to inpaint images right in your browser.
+        demo{" "}uses the{" "}Proof of Me API{" "}
+        machine learning models to inpaint images right in your browser.
       </p>
 
       <Link href="/paint">
@@ -41,7 +21,7 @@ export default function About() {
       </Link>
 
       <Link href="/paint">
-        <a className="py-3 block text-center bg-black text-white rounded-md mt-10">
+        <a className="block py-3 mt-10 text-center text-white bg-black rounded-md">
           Start painting
         </a>
       </Link>
