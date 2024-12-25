@@ -135,28 +135,6 @@ export default function Home() {
               )}
 
             <Download predictions={predictions} />
-            <Link href="https://replicate.com/ideogram-ai/ideogram-v2">
-              <a target="_blank" className="lil-button">
-                <RocketIcon className="icon" />
-                Run Ideogram v2 with an API
-              </a>
-            </Link>
-            <Link href="https://replicate.com/ideogram-ai/ideogram-v2-turbo">
-              <a target="_blank" className="lil-button">
-                <RocketIcon className="icon" />
-                Run Ideogram v2 Turbo with an API
-              </a>
-            </Link>
-            <Link href="https://github.com/replicate/inpainter">
-              <a
-                className="lil-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <CodeIcon className="icon" />
-                See how it&apos;s built on GitHub
-              </a>
-            </Link>
           </div>
         </div>
       </main>
